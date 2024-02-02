@@ -3,7 +3,6 @@ const minLength = 8
 var allSelected = false
 
 var passwordDiv = document.getElementById("password")
-passwordDiv.setAttribute('data-text', 'Password appears here')
 
 var symbol = document.getElementById("symbol")
 var digit = document.getElementById("digit")
@@ -45,7 +44,7 @@ function selectOption(e) {
         return
     }
 
-    // e.preventDefault()
+    e.preventDefault()
     const optionDiv = e.target
     const checkBox = optionDiv.querySelector("span")
     const optionInputNode = optionDiv.querySelector("input")
@@ -60,12 +59,10 @@ function selectOption(e) {
         selectAllNode.classList.remove("active")
         selectAllNode.style.background = "#fff"
         Method.remove(optionInputNode.id)
-        passwordDiv.textContent = ""
-        passwordDiv.setAttribute('data-text', "")
     } else {
         optionInputNode.checked = true
         checkBox.classList.add("active")
-        checkBox.style.background = "green"
+        checkBox.style.background = "#02a402"
         Method.add(optionInputNode.id)
     }
 
@@ -80,7 +77,7 @@ const selectAll = () => {
 
         optionInputNode.checked = true
         checkBox.classList.add("active")
-        checkBox.style.background = "green"
+        checkBox.style.background = "#02a402"
     })
     for (let option in must) {
         must[option][0] = true
@@ -101,8 +98,7 @@ const deselectAll = () => {
     }
     allSelected = false
     selectedMethods = []
-    passwordDiv.textContent = ""
-    passwordDiv.setAttribute('data-text', "Password appears here")
+    passwordDiv.innerHTML = "<p>Password appears here</p>"
 }
 function selectAllOptions(e) {
     e.preventDefault()
@@ -187,7 +183,7 @@ const must = {
 }
 
 const generatePassword = (passpasswordLengthInput) => {
-    passwordDiv.setAttribute('data-text', "")
+    passwordDiv.innerHTML = "<p>Password appears here</p>"
 
     password = ""
 
@@ -220,7 +216,6 @@ const generatePassword = (passpasswordLengthInput) => {
         }
     }
 
-    passwordDiv = document.getElementById("password")
     passwordDiv.innerHTML = password
 }
 passwordDiv.addEventListener("click", async () => {
@@ -241,7 +236,7 @@ passwordDiv.addEventListener("click", async () => {
 })
 const checkCopied = () => {
     document.onclick = (e) => {
-        if (e.target.id === passwordDiv.id && password.length > 0) {
+        if (e.target.id === passwordDiv.id && password?.length > 0) {
             console.log("copying");
             document.querySelector(".main-bubble").classList.add("copied")
             document.querySelector(".copy").textContent = "Copied..!"

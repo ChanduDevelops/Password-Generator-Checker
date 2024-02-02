@@ -25,61 +25,67 @@
         <main>
             <h1 class="heading">Click <span>Generate</span> / <span>Check</span></h1>
             <div class="wrapper">
-                <section class="password-generator">
-                    <div class="password show"
-                         id="password">
-                    </div>
-                    <div class="outer-container">
+                <section class="left">
+                    <div class="heading">
                         <h1><span>P</span>assword-<span>G</span>en</h1>
-                        <div class="container">
-                            <div class="input-box">
-                                <label for="password-length">Password length <br>
-                                    <span>(min-8, max-64)</span>
-                                </label>:
-                                <input type="number"
-                                       id="password-length"
-                                       maxlength="2"
-                                       placeholder="10"
-                                       pattern="\d{2}"
-                                       value="10">
-                            </div>
-                            <div class="options">
-                                <p>Wish to include</p>
-                                <div class="special-character-box box">
-                                    <span class="custom-checkbox"></span>
-                                    <input type="checkbox"
-                                           id="symbol">
-                                    <label for="symbol">Special chars</label>
+                    </div>
+                    <div class="password-generator">
+                        <div class="password show"
+                             id="password">
+                            Password appears here
+                        </div>
+
+                        <div class="outer-container">
+                            <div class="container">
+                                <div class="input-box">
+                                    <label for="password-length">Password length <br>
+                                        <span>(min-8, max-64)</span>
+                                    </label>:
+                                    <input type="number"
+                                           id="password-length"
+                                           maxlength="2"
+                                           placeholder="10"
+                                           pattern="\d{2}"
+                                           value="10">
                                 </div>
-                                <div class="digit-box box">
-                                    <span class="custom-checkbox"></span>
-                                    <input type="checkbox"
-                                           id="digit">
-                                    <label for="digit">Digits</label>
-                                </div>
-                                <div class="uppercase-box box">
-                                    <span class="custom-checkbox"></span>
-                                    <input type="checkbox"
-                                           id="uppercase">
-                                    <label for="uppercase">Uppercase</label>
-                                </div>
-                                <div class="lowercase-box box">
-                                    <span class="custom-checkbox"></span>
-                                    <input type="checkbox"
-                                           id="lowercase">
-                                    <label for="lowercase">Lowercase</label>
-                                </div>
-                                <div class="all-box box">
-                                    <span class="custom-checkbox"></span>
-                                    <input type="checkbox"
-                                           id="all">
-                                    <label for="all">Select all</label>
+                                <div class="options">
+                                    <p>Wish to include</p>
+                                    <div class="special-character-box box">
+                                        <span class="custom-checkbox"></span>
+                                        <input type="checkbox"
+                                               id="symbol">
+                                        <label for="symbol">Special chars</label>
+                                    </div>
+                                    <div class="digit-box box">
+                                        <span class="custom-checkbox"></span>
+                                        <input type="checkbox"
+                                               id="digit">
+                                        <label for="digit">Digits</label>
+                                    </div>
+                                    <div class="uppercase-box box">
+                                        <span class="custom-checkbox"></span>
+                                        <input type="checkbox"
+                                               id="uppercase">
+                                        <label for="uppercase">Uppercase</label>
+                                    </div>
+                                    <div class="lowercase-box box">
+                                        <span class="custom-checkbox"></span>
+                                        <input type="checkbox"
+                                               id="lowercase">
+                                        <label for="lowercase">Lowercase</label>
+                                    </div>
+                                    <div class="all-box box">
+                                        <span class="custom-checkbox"></span>
+                                        <input type="checkbox"
+                                               id="all">
+                                        <label for="all">Select all</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- <button id="generate"
+                        <!-- <button id="generate"
                             class="btn-enable">Generate</button> -->
+                    </div>
                 </section>
                 <section class="bubble-area">
                     <div class="main-bubble">
