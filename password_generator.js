@@ -1,4 +1,4 @@
-const maxLength = 36
+const maxLength = 64
 const minLength = 8
 var allSelected = false
 
@@ -45,8 +45,8 @@ function selectOption(e) {
         return
     }
 
-    e.preventDefault()
-    const optionDiv = e.target.parentNode
+    // e.preventDefault()
+    const optionDiv = e.target
     const checkBox = optionDiv.querySelector("span")
     const optionInputNode = optionDiv.querySelector("input")
 
