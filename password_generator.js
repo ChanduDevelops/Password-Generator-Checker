@@ -237,7 +237,6 @@ passwordDiv.addEventListener("click", async () => {
 const checkCopied = () => {
     document.onclick = (e) => {
         if (e.target.id === passwordDiv.id && password?.length > 0) {
-            console.log("copying");
             document.querySelector(".main-bubble").classList.add("copied")
             document.querySelector(".copy").textContent = "Copied..!"
         } else {
